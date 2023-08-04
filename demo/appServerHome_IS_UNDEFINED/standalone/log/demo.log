@@ -1,0 +1,158 @@
+2023-08-04 00:13:12  [main] INFO  com.example.apps.DemoApplication - Starting DemoApplication using Java 17 with PID 20940 (D:\Projects\NewWorkspace\demo\target\classes started by Chris Ian in D:\Projects\NewWorkspace\demo)
+2023-08-04 00:13:12  [main] INFO  com.example.apps.DemoApplication - No active profile set, falling back to 1 default profile: "default"
+2023-08-04 00:13:13  [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-08-04 00:13:13  [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 3 ms. Found 0 JPA repository interfaces.
+2023-08-04 00:13:13  [main] INFO  c.u.j.c.EnableEncryptablePropertiesBeanFactoryPostProcessor - Post-processing PropertySource instances
+2023-08-04 00:13:13  [main] INFO  c.u.j.EncryptablePropertySourceConverter - Converting PropertySource configurationProperties [org.springframework.boot.context.properties.source.ConfigurationPropertySourcesPropertySource] to AOP Proxy
+2023-08-04 00:13:13  [main] INFO  c.u.j.EncryptablePropertySourceConverter - Converting PropertySource commandLineArgs [org.springframework.core.env.SimpleCommandLinePropertySource] to EncryptableEnumerablePropertySourceWrapper
+2023-08-04 00:13:13  [main] INFO  c.u.j.EncryptablePropertySourceConverter - Converting PropertySource servletConfigInitParams [org.springframework.core.env.PropertySource$StubPropertySource] to EncryptablePropertySourceWrapper
+2023-08-04 00:13:13  [main] INFO  c.u.j.EncryptablePropertySourceConverter - Converting PropertySource servletContextInitParams [org.springframework.core.env.PropertySource$StubPropertySource] to EncryptablePropertySourceWrapper
+2023-08-04 00:13:13  [main] INFO  c.u.j.EncryptablePropertySourceConverter - Converting PropertySource systemProperties [org.springframework.core.env.PropertiesPropertySource] to EncryptableMapPropertySourceWrapper
+2023-08-04 00:13:13  [main] INFO  c.u.j.EncryptablePropertySourceConverter - Converting PropertySource systemEnvironment [org.springframework.boot.env.SystemEnvironmentPropertySourceEnvironmentPostProcessor$OriginAwareSystemEnvironmentPropertySource] to EncryptableMapPropertySourceWrapper
+2023-08-04 00:13:13  [main] INFO  c.u.j.EncryptablePropertySourceConverter - Converting PropertySource random [org.springframework.boot.env.RandomValuePropertySource] to EncryptablePropertySourceWrapper
+2023-08-04 00:13:13  [main] INFO  c.u.j.EncryptablePropertySourceConverter - Converting PropertySource Config resource 'class path resource [demo-application.properties]' via location 'optional:classpath:/' [org.springframework.boot.env.OriginTrackedMapPropertySource] to EncryptableMapPropertySourceWrapper
+2023-08-04 00:13:13  [main] INFO  c.u.j.EncryptablePropertySourceConverter - Converting PropertySource defaultProperties [org.springframework.boot.DefaultPropertiesPropertySource] to EncryptableMapPropertySourceWrapper
+2023-08-04 00:13:13  [main] INFO  c.u.j.f.DefaultLazyPropertyFilter - Property Filter custom Bean not found with name 'encryptablePropertyFilter'. Initializing Default Property Filter
+2023-08-04 00:13:13  [main] INFO  c.u.j.r.DefaultLazyPropertyResolver - Property Resolver custom Bean not found with name 'encryptablePropertyResolver'. Initializing Default Property Resolver
+2023-08-04 00:13:13  [main] INFO  c.u.j.d.DefaultLazyPropertyDetector - Property Detector custom Bean not found with name 'encryptablePropertyDetector'. Initializing Default Property Detector
+2023-08-04 00:13:13  [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'webConfig' of type [com.example.apps.config.WebConfig$$SpringCGLIB$$0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-08-04 00:13:14  [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2023-08-04 00:13:14  [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2023-08-04 00:13:14  [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.11]
+2023-08-04 00:13:14  [main] INFO  o.a.c.c.C.[.[localhost].[/demo] - Initializing Spring embedded WebApplicationContext
+2023-08-04 00:13:14  [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1615 ms
+2023-08-04 00:13:14  [main] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'dataSourceScriptDatabaseInitializer' defined in class path resource [org/springframework/boot/autoconfigure/sql/init/DataSourceInitializationConfiguration.class]: Unsatisfied dependency expressed through method 'dataSourceScriptDatabaseInitializer' parameter 0: Error creating bean with name 'dataSource' defined in class path resource [com/example/apps/DatasourceConfiguration.class]: Failed to instantiate [javax.sql.DataSource]: Factory method 'dataSource' threw exception with message: Error creating bean with name 'loggingAspect' defined in file [D:\Projects\NewWorkspace\demo-file-log\target\classes\com\example\apps\filelog\LoggingAspect.class]: Unsatisfied dependency expressed through constructor parameter 1: No qualifying bean of type 'java.lang.Boolean' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+2023-08-04 00:13:14  [main] INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
+2023-08-04 00:13:14  [main] INFO  o.s.b.a.l.ConditionEvaluationReportLogger - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2023-08-04 00:13:14  [main] ERROR o.s.b.d.LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 1 of constructor in com.example.apps.filelog.LoggingAspect required a bean of type 'java.lang.Boolean' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'java.lang.Boolean' in your configuration.
+
+2023-08-04 00:15:24  [main] INFO  com.example.apps.DemoApplication - Starting DemoApplication using Java 17 with PID 28736 (D:\Projects\NewWorkspace\demo\target\classes started by Chris Ian in D:\Projects\NewWorkspace\demo)
+2023-08-04 00:15:24  [main] INFO  com.example.apps.DemoApplication - No active profile set, falling back to 1 default profile: "default"
+2023-08-04 00:15:24  [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-08-04 00:15:24  [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 4 ms. Found 0 JPA repository interfaces.
+2023-08-04 00:15:25  [main] INFO  c.u.j.c.EnableEncryptablePropertiesBeanFactoryPostProcessor - Post-processing PropertySource instances
+2023-08-04 00:15:25  [main] INFO  c.u.j.EncryptablePropertySourceConverter - Converting PropertySource configurationProperties [org.springframework.boot.context.properties.source.ConfigurationPropertySourcesPropertySource] to AOP Proxy
+2023-08-04 00:15:25  [main] INFO  c.u.j.EncryptablePropertySourceConverter - Converting PropertySource commandLineArgs [org.springframework.core.env.SimpleCommandLinePropertySource] to EncryptableEnumerablePropertySourceWrapper
+2023-08-04 00:15:25  [main] INFO  c.u.j.EncryptablePropertySourceConverter - Converting PropertySource servletConfigInitParams [org.springframework.core.env.PropertySource$StubPropertySource] to EncryptablePropertySourceWrapper
+2023-08-04 00:15:25  [main] INFO  c.u.j.EncryptablePropertySourceConverter - Converting PropertySource servletContextInitParams [org.springframework.core.env.PropertySource$StubPropertySource] to EncryptablePropertySourceWrapper
+2023-08-04 00:15:25  [main] INFO  c.u.j.EncryptablePropertySourceConverter - Converting PropertySource systemProperties [org.springframework.core.env.PropertiesPropertySource] to EncryptableMapPropertySourceWrapper
+2023-08-04 00:15:25  [main] INFO  c.u.j.EncryptablePropertySourceConverter - Converting PropertySource systemEnvironment [org.springframework.boot.env.SystemEnvironmentPropertySourceEnvironmentPostProcessor$OriginAwareSystemEnvironmentPropertySource] to EncryptableMapPropertySourceWrapper
+2023-08-04 00:15:25  [main] INFO  c.u.j.EncryptablePropertySourceConverter - Converting PropertySource random [org.springframework.boot.env.RandomValuePropertySource] to EncryptablePropertySourceWrapper
+2023-08-04 00:15:25  [main] INFO  c.u.j.EncryptablePropertySourceConverter - Converting PropertySource Config resource 'class path resource [demo-application.properties]' via location 'optional:classpath:/' [org.springframework.boot.env.OriginTrackedMapPropertySource] to EncryptableMapPropertySourceWrapper
+2023-08-04 00:15:25  [main] INFO  c.u.j.EncryptablePropertySourceConverter - Converting PropertySource defaultProperties [org.springframework.boot.DefaultPropertiesPropertySource] to EncryptableMapPropertySourceWrapper
+2023-08-04 00:15:25  [main] INFO  c.u.j.f.DefaultLazyPropertyFilter - Property Filter custom Bean not found with name 'encryptablePropertyFilter'. Initializing Default Property Filter
+2023-08-04 00:15:25  [main] INFO  c.u.j.r.DefaultLazyPropertyResolver - Property Resolver custom Bean not found with name 'encryptablePropertyResolver'. Initializing Default Property Resolver
+2023-08-04 00:15:25  [main] INFO  c.u.j.d.DefaultLazyPropertyDetector - Property Detector custom Bean not found with name 'encryptablePropertyDetector'. Initializing Default Property Detector
+2023-08-04 00:15:25  [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'webConfig' of type [com.example.apps.config.WebConfig$$SpringCGLIB$$0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-08-04 00:15:25  [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2023-08-04 00:15:25  [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2023-08-04 00:15:25  [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.11]
+2023-08-04 00:15:25  [main] INFO  o.a.c.c.C.[.[localhost].[/demo] - Initializing Spring embedded WebApplicationContext
+2023-08-04 00:15:25  [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1613 ms
+2023-08-04 00:15:26  [main] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'dataSourceScriptDatabaseInitializer' defined in class path resource [org/springframework/boot/autoconfigure/sql/init/DataSourceInitializationConfiguration.class]: Unsatisfied dependency expressed through method 'dataSourceScriptDatabaseInitializer' parameter 0: Error creating bean with name 'dataSource' defined in class path resource [com/example/apps/DatasourceConfiguration.class]: Failed to instantiate [javax.sql.DataSource]: Factory method 'dataSource' threw exception with message: Error creating bean with name 'loggingAspect' defined in file [D:\Projects\NewWorkspace\demo-file-log\target\classes\com\example\apps\filelog\LoggingAspect.class]: Unsatisfied dependency expressed through constructor parameter 1: No qualifying bean of type 'java.lang.Boolean' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+2023-08-04 00:15:26  [main] INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
+2023-08-04 00:15:26  [main] INFO  o.s.b.a.l.ConditionEvaluationReportLogger - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2023-08-04 00:15:26  [main] ERROR o.s.b.d.LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 1 of constructor in com.example.apps.filelog.LoggingAspect required a bean of type 'java.lang.Boolean' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'java.lang.Boolean' in your configuration.
+
+2023-08-04 00:16:58  [main] INFO  com.example.apps.DemoApplication - Starting DemoApplication using Java 17 with PID 30744 (D:\Projects\NewWorkspace\demo\target\classes started by Chris Ian in D:\Projects\NewWorkspace\demo)
+2023-08-04 00:16:58  [main] INFO  com.example.apps.DemoApplication - No active profile set, falling back to 1 default profile: "default"
+2023-08-04 00:16:59  [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-08-04 00:16:59  [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 4 ms. Found 0 JPA repository interfaces.
+2023-08-04 00:16:59  [main] ERROR o.s.boot.SpringApplication - Application run failed
+java.lang.IllegalStateException: No ConfigurationProperties annotation found on  'com.example.apps.filelogautoconfigure.DemoFileLogConfig'.
+	at org.springframework.util.Assert.state(Assert.java:97)
+	at org.springframework.boot.context.properties.ConfigurationPropertiesBeanRegistrar.registerBeanDefinition(ConfigurationPropertiesBeanRegistrar.java:87)
+	at org.springframework.boot.context.properties.ConfigurationPropertiesBeanRegistrar.register(ConfigurationPropertiesBeanRegistrar.java:61)
+	at org.springframework.boot.context.properties.ConfigurationPropertiesBeanRegistrar.register(ConfigurationPropertiesBeanRegistrar.java:55)
+	at java.base/java.lang.Iterable.forEach(Iterable.java:75)
+	at org.springframework.boot.context.properties.EnableConfigurationPropertiesRegistrar.registerBeanDefinitions(EnableConfigurationPropertiesRegistrar.java:49)
+	at org.springframework.context.annotation.ImportBeanDefinitionRegistrar.registerBeanDefinitions(ImportBeanDefinitionRegistrar.java:86)
+	at org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader.lambda$loadBeanDefinitionsFromRegistrars$1(ConfigurationClassBeanDefinitionReader.java:373)
+	at java.base/java.util.LinkedHashMap.forEach(LinkedHashMap.java:721)
+	at org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader.loadBeanDefinitionsFromRegistrars(ConfigurationClassBeanDefinitionReader.java:372)
+	at org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader.loadBeanDefinitionsForConfigurationClass(ConfigurationClassBeanDefinitionReader.java:148)
+	at org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader.loadBeanDefinitions(ConfigurationClassBeanDefinitionReader.java:120)
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.processConfigBeanDefinitions(ConfigurationClassPostProcessor.java:427)
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.postProcessBeanDefinitionRegistry(ConfigurationClassPostProcessor.java:287)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanDefinitionRegistryPostProcessors(PostProcessorRegistrationDelegate.java:344)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:115)
+	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:771)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:589)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:734)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:436)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:312)
+	at com.example.apps.DemoApplication.main(DemoApplication.java:16)
+2023-08-04 00:17:41  [main] INFO  com.example.apps.DemoApplication - Starting DemoApplication using Java 17 with PID 32552 (D:\Projects\NewWorkspace\demo\target\classes started by Chris Ian in D:\Projects\NewWorkspace\demo)
+2023-08-04 00:17:41  [main] INFO  com.example.apps.DemoApplication - No active profile set, falling back to 1 default profile: "default"
+2023-08-04 00:17:41  [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-08-04 00:17:41  [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 5 ms. Found 0 JPA repository interfaces.
+2023-08-04 00:17:42  [main] INFO  c.u.j.c.EnableEncryptablePropertiesBeanFactoryPostProcessor - Post-processing PropertySource instances
+2023-08-04 00:17:42  [main] INFO  c.u.j.EncryptablePropertySourceConverter - Converting PropertySource configurationProperties [org.springframework.boot.context.properties.source.ConfigurationPropertySourcesPropertySource] to AOP Proxy
+2023-08-04 00:17:42  [main] INFO  c.u.j.EncryptablePropertySourceConverter - Converting PropertySource commandLineArgs [org.springframework.core.env.SimpleCommandLinePropertySource] to EncryptableEnumerablePropertySourceWrapper
+2023-08-04 00:17:42  [main] INFO  c.u.j.EncryptablePropertySourceConverter - Converting PropertySource servletConfigInitParams [org.springframework.core.env.PropertySource$StubPropertySource] to EncryptablePropertySourceWrapper
+2023-08-04 00:17:42  [main] INFO  c.u.j.EncryptablePropertySourceConverter - Converting PropertySource servletContextInitParams [org.springframework.core.env.PropertySource$StubPropertySource] to EncryptablePropertySourceWrapper
+2023-08-04 00:17:42  [main] INFO  c.u.j.EncryptablePropertySourceConverter - Converting PropertySource systemProperties [org.springframework.core.env.PropertiesPropertySource] to EncryptableMapPropertySourceWrapper
+2023-08-04 00:17:42  [main] INFO  c.u.j.EncryptablePropertySourceConverter - Converting PropertySource systemEnvironment [org.springframework.boot.env.SystemEnvironmentPropertySourceEnvironmentPostProcessor$OriginAwareSystemEnvironmentPropertySource] to EncryptableMapPropertySourceWrapper
+2023-08-04 00:17:42  [main] INFO  c.u.j.EncryptablePropertySourceConverter - Converting PropertySource random [org.springframework.boot.env.RandomValuePropertySource] to EncryptablePropertySourceWrapper
+2023-08-04 00:17:42  [main] INFO  c.u.j.EncryptablePropertySourceConverter - Converting PropertySource Config resource 'class path resource [demo-application.properties]' via location 'optional:classpath:/' [org.springframework.boot.env.OriginTrackedMapPropertySource] to EncryptableMapPropertySourceWrapper
+2023-08-04 00:17:42  [main] INFO  c.u.j.EncryptablePropertySourceConverter - Converting PropertySource defaultProperties [org.springframework.boot.DefaultPropertiesPropertySource] to EncryptableMapPropertySourceWrapper
+2023-08-04 00:17:42  [main] INFO  c.u.j.f.DefaultLazyPropertyFilter - Property Filter custom Bean not found with name 'encryptablePropertyFilter'. Initializing Default Property Filter
+2023-08-04 00:17:42  [main] INFO  c.u.j.r.DefaultLazyPropertyResolver - Property Resolver custom Bean not found with name 'encryptablePropertyResolver'. Initializing Default Property Resolver
+2023-08-04 00:17:42  [main] INFO  c.u.j.d.DefaultLazyPropertyDetector - Property Detector custom Bean not found with name 'encryptablePropertyDetector'. Initializing Default Property Detector
+2023-08-04 00:17:42  [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'webConfig' of type [com.example.apps.config.WebConfig$$SpringCGLIB$$0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-08-04 00:17:42  [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2023-08-04 00:17:42  [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2023-08-04 00:17:42  [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.11]
+2023-08-04 00:17:42  [main] INFO  o.a.c.c.C.[.[localhost].[/demo] - Initializing Spring embedded WebApplicationContext
+2023-08-04 00:17:42  [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1811 ms
+2023-08-04 00:17:43  [main] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'dataSourceScriptDatabaseInitializer' defined in class path resource [org/springframework/boot/autoconfigure/sql/init/DataSourceInitializationConfiguration.class]: Unsatisfied dependency expressed through method 'dataSourceScriptDatabaseInitializer' parameter 0: Error creating bean with name 'dataSource' defined in class path resource [com/example/apps/DatasourceConfiguration.class]: Failed to instantiate [javax.sql.DataSource]: Factory method 'dataSource' threw exception with message: Error creating bean with name 'loggingAspect' defined in file [D:\Projects\NewWorkspace\demo-file-log\target\classes\com\example\apps\filelog\LoggingAspect.class]: Unsatisfied dependency expressed through constructor parameter 1: No qualifying bean of type 'java.lang.Boolean' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+2023-08-04 00:17:43  [main] INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
+2023-08-04 00:17:43  [main] INFO  o.s.b.a.l.ConditionEvaluationReportLogger - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2023-08-04 00:17:43  [main] ERROR o.s.b.d.LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 1 of constructor in com.example.apps.filelog.LoggingAspect required a bean of type 'java.lang.Boolean' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'java.lang.Boolean' in your configuration.
+

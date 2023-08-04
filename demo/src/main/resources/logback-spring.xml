@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+	<include resource="org/springframework/boot/logging/logback/defaults.xml" />
+
+	<springProperty scope="context" name="springAppName"
+		source="spring.application.name" />
+		
+	<!-- Example for logging into the build folder of your project -->
+	<!-- <property name="LOG_FILE" value="applogs/${springAppName}" /> -->
+	<property name="LOG_FILE" value="/log/${springAppName}"/>
+
+	<!-- You can override this to have a custom pattern -->
+	<property name="CONSOLE_LOG_PATTERN"
+		value="%d{yyyy-MM-dd HH:mm:ss} %X{requestId} [%thread] %-5level %logger{36} - %msg%n" />
+
+	<!-- Appender to log to console -->
+	<appender name="console" class="ch.qos.logback.core.ConsoleAppender">
+		<filter class="ch.qos.logback.classic.filter.ThresholdFilter">
+			<!-- Minimum logging level to be presented in the console logs -->
+			<level>DEBUG</level>
+		</filter>
+		<encoder>
+			<pattern>${CONSOLE_LOG_PATTERN}</pattern>
+			<charset>utf8</charset>
+		</encoder>
+	</appender>
+
+	<!-- Appender to log to file -->
+	<appender name="flatfile"
+		class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<file>${LOG_FILE}.log</file>
+		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+			<fileNamePattern>${LOG_FILE}.%d{yyyy-MM-dd}.gz</fileNamePattern>
+			<maxHistory>30</maxHistory>
+		</rollingPolicy>
+		<encoder>
+			<pattern>${CONSOLE_LOG_PATTERN}</pattern>
+			<charset>utf8</charset>
+		</encoder>
+	</appender>
+
+	<!-- Appender to log to file for libraries -->
+	<appender name="flatfile-libs"
+		class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<file>${LOG_FILE}-libs.log</file>
+		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+			<fileNamePattern>${LOG_FILE}-libs.%d{yyyy-MM-dd}.gz</fileNamePattern>
+			<maxHistory>30</maxHistory>
+		</rollingPolicy>
+		<encoder>
+			<pattern>${CONSOLE_LOG_PATTERN}</pattern>
+			<charset>utf8</charset>
+		</encoder>
+	</appender>
+
+	<root level="INFO">
+		<appender-ref ref="console" />
+		<appender-ref ref="flatfile" />
+	</root>
+	<logger name="com.uberfusion" level="debug" additivity="false">
+		<appender-ref ref="flatfile" />
+	</logger>
+	<logger name="com.allianz.api" level="debug" additivity="false">
+		<appender-ref ref="flatfile" />
+	</logger>
+	<logger name="org.hibernate.SQL" level="debug" additivity="false">
+		<appender-ref ref="flatfile-libs" />
+	</logger>
+	<logger name="org.hibernate.type.descriptor.sql" level="trace"
+		additivity="false">
+		<appender-ref ref="flatfile-libs" />
+	</logger>
+
+	<logger name="org.springframework.jdbc.core.JdbcTemplate">
+		<level value="debug" />
+		<appender-ref ref="flatfile-libs" />
+	</logger>
+	
+	<logger name="org.springframework.jdbc.core.StatementCreatorUtils" level="TRACE" />
+
+	<logger name="org.springframework.jdbc.core.StatementCreatorUtils">
+		<level value="debug" />
+		<appender-ref ref="flatfile-libs" />
+	</logger>
+</configuration>
